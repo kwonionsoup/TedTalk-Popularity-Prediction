@@ -13,7 +13,7 @@ def preprocessing(data_file):
         pandas.DataFrame:
     """
     df = pd.read_csv(data_file)
-    df = df[['_id', 'duration', 'likes', 'speakers', 'subtitle_languages', 'summary', 'title', 'transcript', 'views']]
+    df = df[['_id', 'duration', 'likes', 'speakers', 'subtitle_languages', 'summary', 'title', 'transcript', 'views', 'recorded_date']]
 
     print("DF shape:")
     print(df.shape)
@@ -34,7 +34,7 @@ def preprocessing(data_file):
 
     # Drop rows with NaN values
     df_dropna = df.dropna(subset=['likes', 'duration', 'views'])
-    df_dropna.to_csv('dropna_processed.csv', index=False)
+    df_dropna.to_csv('date_popularity_processed.csv', index=False)
     
 
     # Unnecessary because there are no NaN values for likes, duration, and views column
@@ -62,7 +62,15 @@ def convert_likes(likes_str):
 
 def main():
     data_file = 'data/talks_info_noedits.csv'
-    preprocessing(data_file)
+    df = pd.read_csv(data_file)
+    df['recorded_date'] = pd.to_datetime(df['recorded_date'], errors='coerce')
+    #Additional Preprocessing
+    df1 = pd.read_csv('data/dropna_processed.csv')
+    df1 = df1[df1.columns[[0,1,2,8]]]
+    df1.insert(2, 'recorded_date', df['recorded_date'], True)
+    df1.insert(3, 'popularity', (df1['likes']/df1['views']) * 100, True)
+    df1.to_csv('data/date_popularity_processed.csv', index=False)
+ 
 
 if __name__ == "__main__":
     main()
