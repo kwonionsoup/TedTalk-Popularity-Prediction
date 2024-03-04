@@ -63,12 +63,10 @@ def convert_likes(likes_str):
 def main():
     data_file = 'data/talks_info_noedits.csv'
     df = pd.read_csv(data_file)
-    df['recorded_date'] = pd.to_datetime(df['recorded_date'], errors='coerce')
+    df['published_date'] = pd.to_datetime(df['published_date'], errors='coerce').dt.date
     #Additional Preprocessing
-    df1 = pd.read_csv('data/dropna_processed.csv')
-    df1 = df1[df1.columns[[0,1,2,8]]]
-    df1.insert(2, 'recorded_date', df['recorded_date'], True)
-    df1.insert(3, 'popularity', (df1['likes']/df1['views']) * 100, True)
+    df1 = pd.read_csv('data/date_popularity_processed.csv')
+    df1.insert(2, 'published_date', df['published_date'], True)
     df1.to_csv('data/date_popularity_processed.csv', index=False)
  
 
