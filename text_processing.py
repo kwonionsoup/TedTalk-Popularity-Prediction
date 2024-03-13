@@ -53,10 +53,11 @@ def main():
 
     final_transcript = df.copy()
     final_transcript.fillna("nan",inplace=True)
-    final_transcript["processed_transcript"] = final_transcript["transcript"].apply(process_text)
+    # final_transcript["processed_transcript"] = final_transcript["transcript"].apply(process_text)
     # final_transcript["transcript_no_contractions"] = final_transcript["transcript"].apply(process_text2)
+    final_transcript["processed_title"] = final_transcript["title"].apply(process_text)
 
-    final_transcript.to_csv("data/data_transcript_fully_processed.csv")
+    final_transcript.to_csv("data/data_title_fully_processed.csv")
 
     
 def process_text(conversation):
