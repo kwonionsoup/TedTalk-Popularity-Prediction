@@ -20,10 +20,10 @@ def michael_preprocess(data_file):
     """
 
     df = pd.read_csv(data_file)
-    df = df[['_id', 'duration', 'likes', 'speakers', 'subtitle_languages', 'summary', 'title', 'transcript', 'views']]
+    df = df[['_id', 'duration', 'likes', 'speakers', 'subtitle_languages', 'summary', 'title', 'transcript', 'views', 'recorded_date', 'published_date']]
 
     # add published date
-    # df['published_date'] = pd.to_datetime(df['published_date'], errors='coerce').dt.date
+    df['published_date'] = pd.to_datetime(df['published_date'], errors='coerce').dt.date
     
     # df['likes'] used to be an object data type, not int
     df['likes'] = df['likes'].astype('str')
@@ -45,7 +45,7 @@ def convert_likes(likes_str):
 
 def main():
 
-    data_path = 'data\dropna_processed_deleted_weird.csv'
+    data_path = 'data/talks_info.csv'
 
     df = michael_preprocess(data_path)
     # df = df_org[['_id', 'duration', 'likes', 'speakers', 'subtitle_languages', 'summary', 'title', 'transcript', 'views', 'recorded_date']]
