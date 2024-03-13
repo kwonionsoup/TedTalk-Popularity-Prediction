@@ -3,7 +3,7 @@
 ## About files:
 
 ### Data Folder
-- [data_transcript_fully_processed.csv](data/data_transcript_fully_processed.csv) takes the data from [talks_info.csv](data/talks_info.csv) and runs it through the [text processing file](text_processing.py].
+- [data_transcript_fully_processed.csv](data/data_transcript_fully_processed.csv) takes the data from [talks_info.csv](data/talks_info.csv) and runs it through the [text processing file](text_processing.py).
 - [dropna_processed_deleted_weird.csv](data/dropna_processed_deleted_weird.csv) was my attempt to get rid of the weird line breaks. This file can probably be deleted.
 - [talks_info.csv](data/talks_info.csv) is the original dataset from Kaggle. Warning: if you open it with Microsoft Excel, the formatting becomes weird.
 
