@@ -11,6 +11,8 @@
 ### Main Section
 - [index.html](index.html) is the webpage that GitHub Pages shows.
 - [text_processing.py](text_processing.py) is the final processing code for the data, with the results stored in [data_transcript_fully_processed.csv](data/data_transcript_fully_processed.csv)
+- [data_eda.ipynb](data_eda.ipynb) performs exploratory data analysis on the dataset.
+
 
 
 ### Other Folders
