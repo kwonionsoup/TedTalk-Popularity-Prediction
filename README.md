@@ -12,6 +12,8 @@
 - [index.html](index.html) is the webpage that GitHub Pages shows.
 - [text_processing.py](text_processing.py) is the final processing code for the data, with the results stored in [data_transcript_fully_processed.csv](data/data_transcript_fully_processed.csv)
 - [data_eda.ipynb](data_eda.ipynb) performs exploratory data analysis on the dataset.
+- [sentiment_analysis.ipynb](sentiment_analysis.ipynb) is a file that experiments with the TextBlob and VADER algorithms on the transcript column of the dataset.
+- [sentiment_analysis_final.ipynb](sentiment_analysis_final.ipynb) is the file with the final version of the two sentiment analysis algorithms (TextBlob and VADER) to be run on our dataset.
 
 
 
