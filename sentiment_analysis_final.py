@@ -18,7 +18,7 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 
 # textblob algorithm
-def analyze_sentiment(text):
+def textblob(text):
     try:
         blob = TextBlob(text)
         sentiment_score = blob.sentiment.polarity
@@ -26,21 +26,27 @@ def analyze_sentiment(text):
     except:
         sentiment_score = 0
         return sentiment_score
-
+    
 
 # In[ ]:
 
 
 # vader algorithm
-sid = SentimentIntensityAnalyzer()
-
+def vader(df):
+    sia = SentimentIntensityAnalyzer()
+    # apply vader algorithm to df and create new column for vader score
+    return df['processed_transcript'].apply(lambda comments:sia.polarity_scores(str(comments))['compound'])
+    
 
 # In[ ]:
 
+def main():
+    df = pd.read_csv("CS-7641\data\data_transcript_fully_processed.csv")
+    # apply textblob algorithm to df and create new column for tb score
+    df['tb_score'] = df['processed_transcript'].apply(textblob)
+    df['vd_score'] = vader(df)
+    print(df[0:5])
 
-# apply textblob algorithm to df and create new column for tb score
-df['tb_score'] = df['transcript'].apply(analyze_sentiment)
-
-# apply vader algorithm to df and create new column for vader score
-df['vd_score'] = df['transcript'].apply(lambda comments:sid.polarity_scores(str(comments))['compound'])
+if __name__ == "__main__":
+    main()
 
