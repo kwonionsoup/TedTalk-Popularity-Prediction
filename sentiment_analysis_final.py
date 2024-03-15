@@ -41,11 +41,12 @@ def vader(df):
 # In[ ]:
 
 def main():
-    df = pd.read_csv("CS-7641\data\data_transcript_fully_processed.csv")
+    data_sentiment_analysis = pd.read_csv("CS-7641\data\data_transcript_fully_processed.csv")
     # apply textblob algorithm to df and create new column for tb score
-    df['tb_score'] = df['processed_transcript'].apply(textblob)
-    df['vd_score'] = vader(df)
-    print(df[0:5])
+    data_sentiment_analysis['tb_score'] = data_sentiment_analysis['processed_transcript'].apply(textblob)
+    data_sentiment_analysis['vd_score'] = vader(data_sentiment_analysis)
+    print(data_sentiment_analysis[0:5])
+    data_sentiment_analysis.to_csv('CS-7641\data\data_sentiment_analysis.csv')
 
 if __name__ == "__main__":
     main()
