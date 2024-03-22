@@ -13,6 +13,7 @@
 - [text_processing.py](text_processing.py) is the final processing code for the data, with the results stored in [data_transcript_fully_processed.csv](data/data_transcript_fully_processed.csv)
 - [data_eda.ipynb](data_eda.ipynb) performs exploratory data analysis on the dataset.
 - [sentiment_analysis_final.ipynb](sentiment_analysis_final.ipynb) is the file with the final version of the two sentiment analysis algorithms (TextBlob and VADER) to be run on our dataset.
+- [sentiment_analysis_final.py](sentiment_analysis_final.py) is the same file as above but in .py format.
 
 
 
