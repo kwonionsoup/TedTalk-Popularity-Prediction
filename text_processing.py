@@ -4,6 +4,7 @@ from nltk.stem import WordNetLemmatizer
 from nltk import word_tokenize
 import contractions
 import string
+import ast
 
 # global vars
 stopws = stopwords.words("english")
@@ -20,7 +21,7 @@ def michael_preprocess(data_file):
     """
 
     df = pd.read_csv(data_file)
-    df = df[['_id', 'duration', 'likes', 'speakers', 'subtitle_languages', 'summary', 'title', 'transcript', 'views', 'recorded_date', 'published_date']]
+    df = df[['_id', 'duration', 'likes', 'speakers', 'subtitle_languages', 'summary', 'topics', 'title', 'transcript', 'views', 'recorded_date', 'published_date']]
 
     # add published date
     df['published_date'] = pd.to_datetime(df['published_date'], errors='coerce').dt.date
@@ -36,12 +37,35 @@ def michael_preprocess(data_file):
 
 def convert_likes(likes_str):
     # Remove non-numeric characters and convert to numeric
-    if likes_str[-1] == 'K':
+    if likes_str.endswith('K'):
         return int(float(likes_str.replace('K', '')) * 1000)
-    elif likes_str[-1] == 'M':
+    elif likes_str.endswith('M'):
         return int(float(likes_str.replace('M', '')) * 1000000)
     else:
         return int(likes_str)
+
+def convert_dictionaires(df):
+
+    final_df = df.copy()
+
+    #  Now I want to be able to use the values in speakers, subtitle languages, and topics, so let's change those dictionaries into lists
+    final_df['speakers'] = final_df['speakers'].apply(ast.literal_eval)
+    # edit speakers column to make a list of topics instead of a dictionary of topics
+    final_df['speakers_list'] = final_df['speakers'].apply(lambda x: [topic['name'] for topic in x])
+    
+    final_df['subtitle_languages'] = final_df['subtitle_languages'].apply(ast.literal_eval)
+    # edit subtitle langauages column to make a list of topics instead of a dictionary of topics
+    final_df['sl_list'] = final_df['subtitle_languages'].apply(lambda x: [topic['name'] for topic in x])
+    
+    final_df['topics'] = final_df['topics'].apply(ast.literal_eval)
+    # edit topics column to make a list of topics instead of a dictionary of topics
+    final_df['topics_list'] = final_df['topics'].apply(lambda x: [topic['name'] for topic in x])
+    
+    # Let's view the dataset again
+    final_df.head()
+
+    return final_df
+
 
 def main():
 
@@ -51,7 +75,8 @@ def main():
     # df = df_org[['_id', 'duration', 'likes', 'speakers', 'subtitle_languages', 'summary', 'title', 'transcript', 'views', 'recorded_date']]
     df["transcript"] = df.transcript.astype("string")
 
-    final_transcript = df.copy()
+    # final_transcript = df.copy()
+    final_transcript = convert_dictionaires(df)
     final_transcript.fillna("nan",inplace=True)
     final_transcript["processed_transcript"] = final_transcript["transcript"].apply(process_text)
     # final_transcript["transcript_no_contractions"] = final_transcript["transcript"].apply(process_text2)
