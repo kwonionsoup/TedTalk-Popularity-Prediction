@@ -54,10 +54,10 @@ def main():
     final_transcript = df.copy()
     final_transcript.fillna("nan",inplace=True)
     # final_transcript["processed_transcript"] = final_transcript["transcript"].apply(process_text)
-    # final_transcript["transcript_no_contractions"] = final_transcript["transcript"].apply(process_text2)
-    final_transcript["processed_title"] = final_transcript["title"].apply(process_text)
+    final_transcript["transcript_no_contractions"] = final_transcript["transcript"].apply(process_text2)
+    # final_transcript["processed_title"] = final_transcript["title"].apply(process_text)
 
-    final_transcript.to_csv("data/data_title_fully_processed.csv")
+    final_transcript.to_csv("data/data_transcript_fully_processed.csv")
 
     
 def process_text(conversation):
@@ -78,9 +78,13 @@ def process_text(conversation):
     # remove stopwords
     removed = [word for word in words_tok if word not in stopws]
 
+    # fix us and vs
+    removed_us = ['uss' if word=='us' else word for word in removed]
+    removed_vs = ['vss' if word=='us' else word for word in removed_us]
+
     # lemmatization
     lemm = WordNetLemmatizer()
-    lemmed = [lemm.lemmatize(word) for word in removed]
+    lemmed = [lemm.lemmatize(word) for word in removed_vs]
     
     # put string together
     final_text = " ".join(lemmed)
