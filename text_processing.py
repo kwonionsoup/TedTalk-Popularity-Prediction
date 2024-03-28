@@ -11,7 +11,7 @@ stopws = stopwords.words("english")
 
 def michael_preprocess(data_file):
     """
-    Drops NaN values within the columns "likes", "duration", and "views" of the TED_info data and saves it to a new excel file.
+    Drops NaN values within the columns "likes", "duration", and "views" of the TED_info data.
 
     Args:
         data_file (str): Path to the Excel file
@@ -25,6 +25,9 @@ def michael_preprocess(data_file):
 
     # add published date
     df['published_date'] = pd.to_datetime(df['published_date'], errors='coerce').dt.date
+
+    # confirm that transcript is of type string
+    df["transcript"] = df.transcript.astype("string")
     
     # df['likes'] used to be an object data type, not int
     df['likes'] = df['likes'].astype('str')
@@ -66,24 +69,6 @@ def convert_dictionaires(df):
 
     return final_df
 
-
-def main():
-
-    data_path = 'data/talks_info.csv'
-
-    df = michael_preprocess(data_path)
-    # df = df_org[['_id', 'duration', 'likes', 'speakers', 'subtitle_languages', 'summary', 'title', 'transcript', 'views', 'recorded_date']]
-    df["transcript"] = df.transcript.astype("string")
-
-    # final_transcript = df.copy()
-    final_transcript = convert_dictionaires(df)
-    final_transcript.fillna("nan",inplace=True)
-    final_transcript["processed_transcript"] = final_transcript["transcript"].apply(process_text)
-    # final_transcript["transcript_no_contractions"] = final_transcript["transcript"].apply(process_text2)
-    # final_transcript["processed_title"] = final_transcript["title"].apply(process_text)
-
-    final_transcript.to_csv("data/data_transcript_fully_processed.csv")
-
     
 def process_text(conversation):
     
@@ -123,6 +108,33 @@ def process_text2(conversation):
         conversation = ' '.join(contractions_stuff)
         
     return conversation
+
+
+def main():
+
+    data_path = 'data/talks_info.csv'
+
+    df = michael_preprocess(data_path)
+    final_transcript = convert_dictionaires(df)
+    final_transcript.fillna("nan",inplace=True)
+
+    # process without any text editing
+    final_transcript = final_transcript.drop(columns=['speakers', 'subtitle_languages', 'topics'])
+    final_transcript.to_csv("data/processed_no_text.csv")
+
+
+    # fully processed transcript
+    # final_transcript["processed_transcript"] = final_transcript["transcript"].apply(process_text)
+    # final_transcript.to_csv("data/data_transcript_fully_processed.csv")
+
+    # processed transcript with no contractions
+    # final_transcript["transcript_no_contractions"] = final_transcript["transcript"].apply(process_text2)
+    # final_transcript.to_csv("data/data_transcript_no_contractions.csv")
+
+    # processed title
+    # final_transcript["processed_title"] = final_transcript["title"].apply(process_text)
+    # final_transcript.to_csv("data/data_title_fully_processed.csv")
+
 
 
 if __name__ == "__main__":
