@@ -36,6 +36,9 @@ def michael_preprocess(data_file):
     # Drop rows with NaN values
     df_dropna = df.dropna(subset=['likes', 'duration', 'views'])
 
+    # calculate popularity
+    df['popularity'] = (df['likes']/df['views']) * 100
+
     return df_dropna
 
 def convert_likes(likes_str):
