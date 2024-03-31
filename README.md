@@ -13,7 +13,7 @@
 - [sentiment_analysis_final.ipynb](sentiment_analysis_final.ipynb): the file with the final version of the two sentiment analysis algorithms (TextBlob and VADER) to be run on our dataset
 - [sentiment_analysis_final.py](sentiment_analysis_final.py): the same file as [above](sentiment_analysis_final.ipynb) but in .py format
 - [SVR.ipynb](SVR.ipynb): 
-- [text_processing.py](text_processing.py): the final processing code for the data, with the results stored in [data_transcript_fully_processed.csv](data/data_transcript_fully_processed.csv)
+- [text_processing.py](text_processing.py): the final processing code for the data
 
 
 ### Data Folder
@@ -41,6 +41,6 @@
 
 
 #### testing_code_not_final
-- [preprocess_attempts.ipynb](testing_code_not_final/preprocess_attempts.ipynb) (in the testing_code_not_final folder) is my experimentation that ultimately led to [text_processing.py](text_processing.py)
-- [sentiment_analysis.ipynb](testing_code_not_final/sentiment_analysis.ipynb) is a file that experiments with the TextBlob and VADER algorithms on the transcript column of the dataset.
+- [preprocess_attempts.ipynb](testing_code_not_final/preprocess_attempts.ipynb): the experimentation that ultimately led to [text_processing.py](text_processing.py)
+- [sentiment_analysis.ipynb](testing_code_not_final/sentiment_analysis.ipynb) ia file that experiments with the TextBlob and VADER algorithms on the transcript column of the dataset
 - [SVR.ipynb](testing_code_not_final/SVR.ipynb)
