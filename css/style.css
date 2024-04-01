@@ -29,7 +29,7 @@ h3 {
     background-color: white;
     padding: 20px;
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 
@@ -39,6 +39,11 @@ h3 {
 }
 
 #ganttdoc {
+    width: 100%;
+    min-height: 400px;
+}
+
+#midtermdoc {
     width: 100%;
     min-height: 400px;
 }
