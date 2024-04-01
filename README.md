@@ -3,8 +3,9 @@
 ## About files:
 
 ### Main Directory
-- [association_rule_mining.ipynb](association_rule_mining.ipynb): 
-- [association_rule_viz.ipynb](association_rule_viz.ipynb): 
+- [association_rule_mining.ipynb](association_rule_mining.ipynb): the file that trains and selects hyperparameters for association rule mining
+- [association_rule_viz.ipynb](association_rule_viz.ipynb): the file that calculates statistics and creates visualizations for word groups extracted from above file
+- [association_functions.py](association_functions.py): contains helper functions used in association rule mining .ipynb files
 - [data_eda.ipynb](data_eda.ipynb): performs exploratory data analysis on the dataset
 - [eda_part2.ipynb](eda_part2.ipynb): performs more exploratory data analysis on the dataset, and focuses on visualizing the distribution of the features
 - [index.html](index.html): the html code for the GitHub Page
