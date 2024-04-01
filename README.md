@@ -12,7 +12,7 @@
 - [sa_analysis.ipynb](sa_analysis.ipynb): 
 - [sentiment_analysis_final.ipynb](sentiment_analysis_final.ipynb): the file with the final version of the two sentiment analysis algorithms (TextBlob and VADER) to be run on our dataset
 - [sentiment_analysis_final.py](sentiment_analysis_final.py): the same file as [above](sentiment_analysis_final.ipynb) but in .py format
-- [SVR.ipynb](SVR.ipynb): 
+- [SVR.ipynb](SVR.ipynb): this is our code-in-progress for support vector regression
 - [text_processing.py](text_processing.py): the final processing code for the data
 
 
