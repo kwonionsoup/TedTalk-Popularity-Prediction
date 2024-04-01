@@ -32,10 +32,10 @@
 ### Other Folders
 
 #### css
-- [style.css](css/style.css)
+- [style.css](css/style.css): style.css document for our GitHub page
 
 #### example_code
-- [Maybe_Final_Homework3.ipynb](example_code/Maybe_Final_Homework3.ipynb) an example of some text generation code that I used in 2021 in case anyone wants a (very basic) reference
+- [Maybe_Final_Homework3.ipynb](example_code/Maybe_Final_Homework3.ipynb): an example of some text generation code that I used in 2021 in case anyone wants a (very basic) reference
 
 #### pdfs
 - [CS_7641_Machine_Learning.pdf](pdfs/CS_7641_Machine_Learning.pdf): project proposal
