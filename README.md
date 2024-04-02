@@ -45,7 +45,7 @@
 - [data_sentiment_analysis.csv](data/data_sentiment_analysis.csv) output of sentiment analysis, includes TextBlob and VADER scores
 - [data_title_fully_processed.csv](data/data_title_fully_processed.csv): file with a processed title field
 - [data_transcript_fully_processed.csv](data/data_transcript_fully_processed.csv) takes the data (specifically the transcript) from [talks_info.csv](data/talks_info.csv) and runs it through the [text processing file](text_processing.py)
-- [date_popularity_processed.csv](data/date_popularity_processed.csv)
+- [date_popularity_processed.csv](data/date_popularity_processed.csv): file with popularity and processed data
 - [dropna_processed.csv](data/dropna_processed.csv)
 - [processed_no_text.csv](data/processed_no_text.csv)
 - [talks_info.csv](data/talks_info.csv): the original dataset from Kaggle (Warning: if you open it with Microsoft Excel, the formatting becomes weird)

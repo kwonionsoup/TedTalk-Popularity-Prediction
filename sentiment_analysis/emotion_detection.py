@@ -65,9 +65,11 @@ def analyze_text_emotion_chat(text):
         return "Error: Unable to analyze"
 
 # Load the CSV file into a DataFrame
+# df = pd.read_csv('data/data_transcript_fully_processed.csv')
 df = pd.read_csv('/Users/taeeunkwon/Downloads/vscode_projects/data/data_transcript_fully_processed.csv')
 
 # Define the output CSV path
+# output_csv_path = 'data/updated_transcripts_with_emotions_v2.csv'
 output_csv_path = '/Users/taeeunkwon/Downloads/vscode_projects/data/updated_transcripts_with_emotions_v2.csv'
 
 # Initialize the CSV file with the current DataFrame structure if the file doesn't exist
