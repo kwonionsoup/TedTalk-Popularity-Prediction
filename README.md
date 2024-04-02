@@ -3,7 +3,7 @@
 ## Main Directory
 
 - [index.html](index.html): the html code for the GitHub Page
-- [requirements.txt](requirements.txt): 
+- [requirements.txt](requirements.txt): list of required Python packages for the repository
 
 
 ## Models' Folders
