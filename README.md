@@ -10,7 +10,7 @@
 - [eda_part2.ipynb](eda_part2.ipynb): performs more exploratory data analysis on the dataset, and focuses on visualizing the distribution of the features
 - [index.html](index.html): the html code for the GitHub Page
 - [requirements.txt](requirements.txt): 
-- [sa_analysis.ipynb](sa_analysis.ipynb): 
+- [sa_analysis.ipynb](sa_analysis.ipynb): performs analysis on data_sentiment_analysis.csv, which is the dataset that includes TextBlob and VADER scores for each TED Talk.
 - [sentiment_analysis_final.ipynb](sentiment_analysis_final.ipynb): the file with the final version of the two sentiment analysis algorithms (TextBlob and VADER) to be run on our dataset
 - [sentiment_analysis_final.py](sentiment_analysis_final.py): the same file as [above](sentiment_analysis_final.ipynb) but in .py format
 - [SVR.ipynb](SVR.ipynb): this is our code-in-progress for support vector regression
@@ -18,7 +18,7 @@
 
 
 ### Data Folder
-- [data_sentiment_analysis.csv](data/data_sentiment_analysis.csv)
+- [data_sentiment_analysis.csv](data/data_sentiment_analysis.csv) output of sentiment analysis, includes TextBlob and VADER scores.
 - [data_title_fully_processed.csv](data/data_title_fully_processed.csv)
 - [data_transcript_fully_processed.csv](data/data_transcript_fully_processed.csv) takes the data from [talks_info.csv](data/talks_info.csv) and runs it through the [text processing file](text_processing.py)
 - [date_popularity_processed.csv](data/date_popularity_processed.csv)
