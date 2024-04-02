@@ -45,9 +45,9 @@
 - [date_popularity_processed.csv](data/date_popularity_processed.csv)
 - [dropna_processed.csv](data/dropna_processed.csv)
 - [processed_no_text.csv](data/processed_no_text.csv)
-<!-- - [talks_info_noedits.csv](data/talks_info_noedits.csv) -->
 - [talks_info.csv](data/talks_info.csv): the original dataset from Kaggle (Warning: if you open it with Microsoft Excel, the formatting becomes weird)
 
 ### pdfs
 - [CS_7641_Machine_Learning.pdf](pdfs/CS_7641_Machine_Learning.pdf): project proposal
 
+<!-- - [talks_info_noedits.csv](data/talks_info_noedits.csv) -->
