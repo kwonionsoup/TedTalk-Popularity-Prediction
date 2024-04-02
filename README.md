@@ -7,6 +7,7 @@
 - [requirements.txt](requirements.txt): 
 
 
+## Models' Folders
 
 ### Association Rule Mining (association_mining)
 - [association_rule_mining.ipynb](association_mining/association_rule_mining.ipynb): the file that trains and selects hyperparameters for association rule mining
