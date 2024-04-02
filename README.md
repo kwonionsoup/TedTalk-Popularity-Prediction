@@ -30,7 +30,7 @@
 
 ### svr
 - [SVR.ipynb](svr/SVR.ipynb): this is our code-in-progress for support vector regression
-- [SVR_Copy.ipynb](svr/SVR_Copy.ipynb)
+- [SVR_Copy.ipynb](svr/SVR_copy.ipynb)
 
 ### text gen
 - [text_gen.ipynb](text_gen/text_gen.ipynb): explores 4 different encoder-decoder text summarization models without fine-tuning
