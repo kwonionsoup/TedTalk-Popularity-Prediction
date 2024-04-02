@@ -32,8 +32,8 @@
 - [SVR.ipynb](svr/SVR.ipynb): this is our code-in-progress for support vector regression
 - [SVR_Copy.ipynb](svr/SVR_Copy.ipynb)
 
-### text generation
-- [text_gen.ipynb](text_gen.ipynb): explores 4 different encoder-decoder text summarization models without fine-tuning
+### text gen
+- [text_gen.ipynb](text_gen/text_gen.ipynb): explores 4 different encoder-decoder text summarization models without fine-tuning
 
 ## Other Folders
 
