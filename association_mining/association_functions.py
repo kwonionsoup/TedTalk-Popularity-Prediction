@@ -28,14 +28,16 @@ def extract_rules(tokened_text, sthresh, cthresh):
     rules = []
     support = []
     confidence = []
+    lift = []
 
     for i, rule in enumerate(results):
         words = rule.items
         rules.append(words)
         support.append(rule.support)
         confidence.append(rule.ordered_statistics[0].confidence)
+        lift.append(rule.ordered_statistics[0].lift)
 
-    return rules, support, confidence
+    return rules, support, confidence, lift
 
 def rule_metrics(rule, tokened_text, metrics):
     '''
