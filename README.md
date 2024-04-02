@@ -48,6 +48,7 @@
 - [dropna_processed.csv](data/dropna_processed.csv)
 - [processed_no_text.csv](data/processed_no_text.csv)
 - [talks_info.csv](data/talks_info.csv): the original dataset from Kaggle (Warning: if you open it with Microsoft Excel, the formatting becomes weird)
+- [updated_transcripts_with_emotions_v2.csv](data/updated_transcripts_with_emotions_v2.csv): contains transcripts with detected emotions extracted using OpenAI API and prompt engineering, not ready for SVR model integration yet.
 
 ### pdfs
 - [CS_7641_Machine_Learning.pdf](pdfs/CS_7641_Machine_Learning.pdf): project proposal
