@@ -53,5 +53,6 @@
 
 ### pdfs
 - [CS_7641_Machine_Learning.pdf](pdfs/CS_7641_Machine_Learning.pdf): project proposal
+- [midterm_report.pdf](pdfs/midterm_report.pdf): midterm report
 
 <!-- - [talks_info_noedits.csv](data/talks_info_noedits.csv) -->
