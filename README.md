@@ -23,6 +23,7 @@
 - [eda_part2.ipynb](eda/eda_part2.ipynb): performs more exploratory data analysis on the dataset, and focuses on visualizing the distribution of the features
 
 ### sentiment_analysis
+- [emotion_detection.py](sentiment_analysis/emotion_detection.py)
 - [sa_analysis.ipynb](sentiment_analysis/sa_analysis.ipynb): performs analysis on [data_sentiment_analysis.csv](data/data_sentiment_analysis.csv), which is the dataset that includes TextBlob and VADER scores for each TED Talk.
 - [sentiment_analysis_final.ipynb](sentiment_analysis/sentiment_analysis_final.ipynb): the file with the final version of the two sentiment analysis algorithms (TextBlob and VADER) to be run on our dataset
 - [sentiment_analysis_final.py](sentiment_analysis/sentiment_analysis_final.py): the same file as [above](sentiment_analysis/sentiment_analysis_final.ipynb) but in .py format
