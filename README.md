@@ -2,14 +2,13 @@
 
 ## Main Directory
 
-### Files
 - [index.html](index.html): the html code for the GitHub Page
 - [requirements.txt](requirements.txt): 
 
 
 ## Models' Folders
 
-### Association Rule Mining (association_mining)
+### association_mining
 - [association_rule_mining.ipynb](association_mining/association_rule_mining.ipynb): the file that trains and selects hyperparameters for association rule mining
 - [association_rule_viz.ipynb](association_mining/association_rule_viz.ipynb): the file that calculates statistics and creates visualizations for word groups extracted from above file
 - [association_functions.py](association_mining/association_functions.py): contains helper functions used in association rule mining .ipynb files
@@ -34,12 +33,12 @@
 - [SVR_Copy.ipynb](svr/SVR_Copy.ipynb)
 
 
-### Other Folders
+## Other Folders
 
-#### css
+### css
 - [style.css](css/style.css): style.css document for our GitHub page
 
-#### data
+### data
 - [data_sentiment_analysis.csv](data/data_sentiment_analysis.csv) output of sentiment analysis, includes TextBlob and VADER scores.
 - [data_title_fully_processed.csv](data/data_title_fully_processed.csv)
 - [data_transcript_fully_processed.csv](data/data_transcript_fully_processed.csv) takes the data from [talks_info.csv](data/talks_info.csv) and runs it through the [text processing file](text_processing.py)
@@ -49,6 +48,6 @@
 - [talks_info_noedits.csv](data/talks_info_noedits.csv)
 - [talks_info.csv](data/talks_info.csv): the original dataset from Kaggle (Warning: if you open it with Microsoft Excel, the formatting becomes weird)
 
-#### pdfs
+### pdfs
 - [CS_7641_Machine_Learning.pdf](pdfs/CS_7641_Machine_Learning.pdf): project proposal
 
