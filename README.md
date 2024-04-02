@@ -1,10 +1,12 @@
-# CS-7641
+# CS-7641 Machine Learning Files
 
-## About files:
+## Main Directory
 
-### Main Directory
+### Files
 - [index.html](index.html): the html code for the GitHub Page
 - [requirements.txt](requirements.txt): 
+
+
 
 ### Association Rule Mining (association_mining)
 - [association_rule_mining.ipynb](association_mining/association_rule_mining.ipynb): the file that trains and selects hyperparameters for association rule mining
