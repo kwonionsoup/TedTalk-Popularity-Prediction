@@ -52,7 +52,7 @@
 - [updated_transcripts_with_emotions_v2.csv](data/updated_transcripts_with_emotions_v2.csv): contains transcripts with detected emotions extracted using OpenAI API and prompt engineering, not ready for SVR model integration yet.
 
 ### pdfs
-- [CS_7641_Machine_Learning.pdf](pdfs/CS_7641_Machine_Learning.pdf): project proposal
+- [proposal.pdf](pdfs/proposal.pdf): project proposal
 - [midterm_report.pdf](pdfs/midterm_report.pdf): midterm report
 
 <!-- - [talks_info_noedits.csv](data/talks_info_noedits.csv) -->
