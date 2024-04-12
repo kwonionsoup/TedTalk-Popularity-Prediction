@@ -55,7 +55,8 @@ Folder containing data
 - [data_transcript_fully_processed.csv](data/data_transcript_fully_processed.csv) takes the data (specifically the transcript) from [talks_info.csv](data/talks_info.csv) and runs it through the [text processing file](text_processing.py)
 - [date_popularity_processed.csv](data/date_popularity_processed.csv): file with popularity and processed data
 - [talks_info.csv](data/talks_info.csv): the original dataset from Kaggle (Warning: if you open it with Microsoft Excel, the formatting becomes weird)
-- [updated_transcripts_with_emotions_v2.csv](data/updated_transcripts_with_emotions_v2.csv): contains transcripts with detected emotions extracted using OpenAI API and prompt engineering, not ready for SVR model integration yet.
+- [updated_transcripts_with_emotions_final.csv](data/updated_transcripts_with_emotions_final.csv): contains transcripts with detected emotions extracted using OpenAI API and prompt engineering, not ready for SVR model integration yet.
+- [final_data_for_svr.csv](data/final_data_for_svr.csv): Combined data_sentiment_analysis.csv and updated_transcripts_with_emotions_final.csv and ready to be used for SVR model.
 
 ### pdfs
 Folder containing pdfs
