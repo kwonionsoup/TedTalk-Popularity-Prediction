@@ -43,7 +43,9 @@ def analyze_text_emotion_chat(text):
     emotions_prompt = ", ".join([f'"{emotion}"' for emotion in emotions_list[:-1]]) + ", or " + f'"{emotions_list[-1]}"'
     prompt = f"""Given the following text excerpt, evaluate the likelihood of each of the following emotions being conveyed to the audience: {emotions_prompt}. Assign a score from 0.0 to 1.0 to each emotion based on its relevance, where 1.0 represents the highest likelihood of being evoked. Then, list the top three emotions with their scores in descending order of likelihood in JSON format.
 
-    Please give me the top three emotions and their scores in the following JSON format:
+    Make sure you only use the emotions provided in the list: ["Inspired", "Amused", "Informed", "Curious", "Hopeful"
+    , "Moved", "Surprised", "Impressed", "Fulfilled", "Sad"]
+    And give me the top three emotions and their scores in the following JSON format:
     {{"Inspired": 0.9, "Curious": 0.75, "Amused": 0.5}}
     Do not include any other information in the response.
 
@@ -70,14 +72,14 @@ df = pd.read_csv('/Users/taeeunkwon/Downloads/vscode_projects/data/data_transcri
 
 # Define the output CSV path
 # output_csv_path = 'data/updated_transcripts_with_emotions_v2.csv'
-output_csv_path = '/Users/taeeunkwon/Downloads/vscode_projects/data/updated_transcripts_with_emotions_v2.csv'
+output_csv_path = '/Users/taeeunkwon/Downloads/vscode_projects/data/updated_transcripts_with_emotions_v2_pt.3.csv'
 
 # Initialize the CSV file with the current DataFrame structure if the file doesn't exist
 df[:0].to_csv(output_csv_path, index=False)  # Save only the header initially
 
 # Process the DataFrame in chunks of 30 rows
-chunk_size = 20
-for start in range(0, len(df), chunk_size):
+chunk_size = 10
+for start in range(2000, len(df), chunk_size):
     end = start + chunk_size
     print(f"Processing rows {start} to {end}")
     for index, row in df.iloc[start:end].iterrows():

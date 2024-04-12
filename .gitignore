@@ -141,3 +141,8 @@ pw.py
 !.vscode/extensions.json
 !.vscode/*.code-snippets
 
+# Add this line to your .gitignore file
+CS_7641/CS-7641/
+
+# In your .gitignore file
+CS_7641/CS-7641/
