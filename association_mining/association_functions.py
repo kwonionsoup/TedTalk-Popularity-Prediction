@@ -13,7 +13,7 @@ def split_tokens(processed_text):
         text_tokens.append(str(line).split(' '))
     return text_tokens
 
-def extract_rules(tokened_text, sthresh, cthresh):
+def extract_rules(tokened_text, sthresh, cthresh, exclude_singles=False):
     '''
     Args:
         tokened_text: 2D list of text tokens
@@ -30,12 +30,21 @@ def extract_rules(tokened_text, sthresh, cthresh):
     confidence = []
     lift = []
 
-    for i, rule in enumerate(results):
-        words = rule.items
-        rules.append(words)
-        support.append(rule.support)
-        confidence.append(rule.ordered_statistics[0].confidence)
-        lift.append(rule.ordered_statistics[0].lift)
+    for rule in results:
+        if len(rule.items) == 1:
+            if exclude_singles:
+                continue
+            rules.append(list(rule.items))
+            support.append(rule.support)
+            confidence.append(rule.ordered_statistics[0].confidence)
+            lift.append(rule.ordered_statistics[0].lift)
+        else:
+            for orderedstat in rule.ordered_statistics:
+                if len(orderedstat.items_base) > 0:
+                    rules.append(list(orderedstat.items_base) + list(orderedstat.items_add))
+                    support.append(rule.support)
+                    confidence.append(orderedstat.confidence)
+                    lift.append(orderedstat.lift)
 
     return rules, support, confidence, lift
 
