@@ -20,9 +20,10 @@ def extract_rules(tokened_text, sthresh, cthresh, exclude_singles=False):
         sthresh: support threshold for association rule mining
         cthresh: confidence threshold for association rule mining
     Return:
-        rules: list of rules (sets of words)
+        rules: list of rules (list of words)
         support: list of rule support
         confidence: list of rule confidence
+        lift: list of rule lift
     '''
     results = list(apriori(tokened_text, min_support = sthresh, min_confidence = cthresh, max_length = 2))
     rules = []
@@ -57,6 +58,7 @@ def rule_metrics(rule, tokened_text, metrics):
     Return:
         rule_metric: 1D ndarray of metrics of TEDTalks with titles that contain the rule
     '''
+    rule = set(rule)
     rule_mask = np.empty(len(tokened_text), dtype=bool)
     for j, title in enumerate(tokened_text):
         rule_mask[j] = rule.issubset(set(title))
