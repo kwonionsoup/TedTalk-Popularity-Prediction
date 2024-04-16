@@ -10,12 +10,14 @@
 
 ### association_mining
 Folder containing Association Rule Mining code
-- [association_rule_mining.ipynb](association_mining/association_rule_mining.ipynb): the file that trains and selects hyperparameters for association rule mining
-- [association_rule_viz.ipynb](association_mining/association_rule_viz.ipynb): the file that calculates statistics and creates visualizations for word groups extracted from above file
+- [title_association_rule_mining.ipynb](association_mining/title_association_rule_mining.ipynb): the file that trains and selects hyperparameters for association rule mining
+- [title_association_rule_viz.ipynb](title_association_mining/association_rule_viz.ipynb): the file that calculates statistics and creates visualizations for word groups extracted from above file
 - [association_functions.py](association_mining/association_functions.py): contains helper functions used in association rule mining .ipynb files
+- [emotion_association_rule_mining.ipynb](association_mining/emotion_association_rule_mining.ipynb):
 
 ### data_preprocessing
 Folder containing Data Preprocessing code
+- [detected_emotion_preprocessing.ipynb](data_preprocessing/detected_emotion_preprocessing.ipynb):
 - [preprocess.py](data_preprocessing/preprocess.py): beginning data preprocessing code
 - [preprocess_attempts.ipynb](data_preprocessing/preprocess_attempts.ipynb): the experimentation that ultimately led to [text_processing.py](data_preprocessing/text_processing.py)
 - [text_processing.py](data_preprocessing/text_processing.py): the final processing code for the data
@@ -32,11 +34,13 @@ Folder containing Sentiment Analysis code
 - [sentiment_analysis_final.ipynb](sentiment_analysis/sentiment_analysis_final.ipynb): the file with the final version of the two sentiment analysis algorithms (TextBlob and VADER) to be run on our dataset
 - [sentiment_analysis_final.py](sentiment_analysis/sentiment_analysis_final.py): the same file as [above](sentiment_analysis/sentiment_analysis_final.ipynb) but in .py format
 - [sentiment_analysis.ipynb](sentiment_analysis/sentiment_analysis.ipynb) ia file that experiments with the TextBlob and VADER algorithms on the transcript column of the dataset
+- [topic_emotion_classifier.ipynb](sentiment_analysis/topic_emotion_classifier.ipynb):
 
 ### svr
 Folder containing SVR code
 - [SVR.ipynb](svr/SVR.ipynb): this is our code-in-progress for support vector regression
 - [SVR_Copy.ipynb](svr/SVR_copy.ipynb)
+- [SVR_ChristinesVersion.ipynb](svr/SVR_ChristinesVersion.ipynb)
 
 ### text gen
 Folder containing Text Generation code
@@ -57,6 +61,9 @@ Folder containing data
 - [talks_info.csv](data/talks_info.csv): the original dataset from Kaggle (Warning: if you open it with Microsoft Excel, the formatting becomes weird)
 - [updated_transcripts_with_emotions_final.csv](data/updated_transcripts_with_emotions_final.csv): contains transcripts with detected emotions extracted using OpenAI API and prompt engineering, not ready for SVR model integration yet.
 - [final_data_for_svr.csv](data/final_data_for_svr.csv): Combined data_sentiment_analysis.csv and updated_transcripts_with_emotions_final.csv and ready to be used for SVR model.
+- [updated_transcripts_with_emotions_v2_pt.2.csv](data/updated_transcripts_with_emotions_v2_pt.2.csv):
+- [updated_transcripts_with_emotions_v2_pt.3.csv](data/updated_transcripts_with_emotions_v2_pt.3.csv):
+- [updated_transcripts_with_emotions_v2.csv](data/updated_transcripts_with_emotions_v2.csv):
 
 ### pdfs
 Folder containing pdfs
