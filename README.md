@@ -38,9 +38,8 @@ Folder containing Sentiment Analysis code
 
 ### svr
 Folder containing SVR code
-- [SVR.ipynb](svr/SVR.ipynb): this is our code-in-progress for support vector regression
-- [SVR_Copy.ipynb](svr/SVR_copy.ipynb)
-- [SVR_ChristinesVersion.ipynb](svr/SVR_ChristinesVersion.ipynb)
+- [SVR_topics.ipynb](svr/SVR_topics.ipynb): this is our code for the SVR model that uses topics as a feature.
+- [SVR_emotions.ipynb](svr/SVR_ChristinesVersion.ipynb): this is our code for the SVR model that uses detected emotions as a feature.
 
 ### text gen
 Folder containing Text Generation code
