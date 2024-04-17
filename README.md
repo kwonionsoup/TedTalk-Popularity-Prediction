@@ -44,7 +44,8 @@ Folder containing SVR code
 
 ### text gen
 Folder containing Text Generation code
-- [text_gen.ipynb](text_gen/text_gen.ipynb): explores 4 different encoder-decoder text summarization models without fine-tuning
+- [text_gen.ipynb](text_gen/text_gen.ipynb): explores 4 different encoder-decoder text summarization models
+- [Text_summarization_1.ipynb](text_gen/Text_summarization_1.ipynb): conducts hierarchical summarization computes cosine similarity score
 
 ## Other Folders
 
