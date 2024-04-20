@@ -34,8 +34,7 @@ openai.api_key = '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'
 # The list of specific emotions to consider
 emotions_list = [
     "Inspired", "Amused", "Informed", "Curious", "Hopeful"
-    , "Moved", "Surprised", "Impressed", "Fulfilled", "Sad"
-]
+    , "Moved", "Surprised", "Impressed", "Fulfilled", "Sad"]
 
 
 def analyze_text_emotion_chat(text):
@@ -72,14 +71,14 @@ df = pd.read_csv('/Users/taeeunkwon/Downloads/vscode_projects/data/data_transcri
 
 # Define the output CSV path
 # output_csv_path = 'data/updated_transcripts_with_emotions_v2.csv'
-output_csv_path = '/Users/taeeunkwon/Downloads/vscode_projects/data/updated_transcripts_with_emotions_v2_pt.3.csv'
+output_csv_path = '/Users/taeeunkwon/Downloads/vscode_projects/data/updated_transcripts_with_emotions_v2.csv'
 
 # Initialize the CSV file with the current DataFrame structure if the file doesn't exist
 df[:0].to_csv(output_csv_path, index=False)  # Save only the header initially
 
 # Process the DataFrame in chunks of 30 rows
 chunk_size = 10
-for start in range(2000, len(df), chunk_size):
+for start in range(0, len(df), chunk_size):
     end = start + chunk_size
     print(f"Processing rows {start} to {end}")
     for index, row in df.iloc[start:end].iterrows():
