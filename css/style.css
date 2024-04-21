@@ -1,6 +1,7 @@
 .jumbotron {
     background-color: white;
     padding: 10px;
+    margin-top: 40px;
 }
 
 body {
@@ -46,4 +47,21 @@ h3 {
 #midtermdoc {
     width: 100%;
     min-height: 400px;
+}
+
+.navbar {
+    background-color: white;
+    padding: 10px;
+}
+
+.navbar-brand {
+    color: white;
+    background-color: rgb(73,170,165);
+    padding: 10px;
+}
+
+@media (max-width : 768px) {
+    .navbar {
+    background-color: rgb(73,170,165);
+  }
 }
