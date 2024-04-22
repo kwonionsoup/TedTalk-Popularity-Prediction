@@ -2,7 +2,10 @@
 
 ## Main Directory
 
-- [index.html](index.html): the html code for the GitHub Page
+- [index.html](index.html): the html code for the GitHub Page's home page
+- [midterm.html](midterm.html): the html code for the GitHub Page with the midterm report
+- [proposal.html](proposal.html): the html code for the GitHub Page with the proposal
+- [gantt.html](gantt.html): the html code for the GitHub Page with our Gantt chart
 - [requirements.txt](requirements.txt): list of required Python packages for the repository
 
 
@@ -33,18 +36,22 @@ Folder containing Sentiment Analysis code
 - [sa_analysis.ipynb](sentiment_analysis/sa_analysis.ipynb): performs analysis on [data_sentiment_analysis.csv](data/data_sentiment_analysis.csv), which is the dataset that includes TextBlob and VADER scores for each TED Talk.
 - [sentiment_analysis_final.ipynb](sentiment_analysis/sentiment_analysis_final.ipynb): the file with the final version of the two sentiment analysis algorithms (TextBlob and VADER) to be run on our dataset
 - [sentiment_analysis_final.py](sentiment_analysis/sentiment_analysis_final.py): the same file as [above](sentiment_analysis/sentiment_analysis_final.ipynb) but in .py format
-- [sentiment_analysis.ipynb](sentiment_analysis/sentiment_analysis.ipynb) ia file that experiments with the TextBlob and VADER algorithms on the transcript column of the dataset
-- [topic_emotion_classifier.ipynb](sentiment_analysis/topic_emotion_classifier.ipynb):
+- [sentiment_analysis.ipynb](sentiment_analysis/sentiment_analysis.ipynb): a file that experiments with the TextBlob and VADER algorithms on the transcript column of the dataset
+- [topic_emotion_classifier.ipynb](sentiment_analysis/topic_emotion_classifier.ipynb): experiments with topic and emotion classification from numerical values as well as transcripts
 
 ### svr
 Folder containing SVR code
 - [SVR_topics.ipynb](svr/SVR_topics.ipynb): this is our code for the SVR model that uses topics as a feature.
-- [SVR_emotions.ipynb](svr/SVR_ChristinesVersion.ipynb): this is our code for the SVR model that uses detected emotions as a feature.
+- [SVR_emotions.ipynb](svr/SVR_emotions.ipynb): this is our code for the SVR model that uses detected emotions as a feature.
+- [SVR_occupations.ipynb](svr/SVR_occupations.ipynb):
 
 ### text gen
 Folder containing Text Generation code
 - [text_gen.ipynb](text_gen/text_gen.ipynb): explores 4 different encoder-decoder text summarization models
 - [Text_summarization_1.ipynb](text_gen/Text_summarization_1.ipynb): conducts hierarchical summarization computes cosine similarity score
+- [bart_summaries.csv](text_gen/results/bart_summaries.csv):
+- [gpt_summaries.csv](text_gen/results/gpt_summaries.csv):
+- [t5_summaries.csv](text_gen/results/t5_summaries.csv): 
 
 ## Other Folders
 
@@ -61,14 +68,12 @@ Folder containing data
 - [talks_info.csv](data/talks_info.csv): the original dataset from Kaggle (Warning: if you open it with Microsoft Excel, the formatting becomes weird)
 - [updated_transcripts_with_emotions_final.csv](data/updated_transcripts_with_emotions_final.csv): contains transcripts with detected emotions extracted using OpenAI API and prompt engineering, not ready for SVR model integration yet.
 - [final_data_for_svr.csv](data/final_data_for_svr.csv): Combined data_sentiment_analysis.csv and updated_transcripts_with_emotions_final.csv and ready to be used for SVR model.
-- [updated_transcripts_with_emotions_v2_pt.2.csv](data/updated_transcripts_with_emotions_v2_pt.2.csv):
-- [updated_transcripts_with_emotions_v2_pt.3.csv](data/updated_transcripts_with_emotions_v2_pt.3.csv):
-- [updated_transcripts_with_emotions_v2.csv](data/updated_transcripts_with_emotions_v2.csv):
 
 ### pdfs
 Folder containing pdfs
 - [proposal.pdf](pdfs/proposal.pdf): project proposal
 - [midterm_report.pdf](pdfs/midterm_report.pdf): midterm report
+- [final.pdf](pdfs/final_report.pdf): final report
 
 <!-- - [talks_info_noedits.csv](data/talks_info_noedits.csv) -->
 <!-- - [dropna_processed.csv](data/dropna_processed.csv)
