@@ -9,6 +9,7 @@
 - [proposal.html](proposal.html): the html code for the GitHub Page with the proposal
 - [gantt.html](gantt.html): the html code for the GitHub Page with our Gantt chart
 - [requirements.txt](requirements.txt): list of required Python packages for the repository
+- [video.html](video.html): the html code for the GitHub Page with the youtube video
 
 
 ## Models' Folders
