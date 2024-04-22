@@ -43,13 +43,13 @@ Folder containing Sentiment Analysis code
 Folder containing SVR code
 - [SVR_topics.ipynb](svr/SVR_topics.ipynb): this is our code for the SVR model that uses topics as a feature.
 - [SVR_emotions.ipynb](svr/SVR_emotions.ipynb): this is our code for the SVR model that uses detected emotions as a feature.
-- [SVR_occupations.ipynb](svr/SVR_occupations.ipynb):
+- [SVR_occupations.ipynb](svr/SVR_occupations.ipynb): this is our code for the SVR model that uses occupations as a feature.
 
 ### text gen
 Folder containing Text Generation code
 - [text_gen.ipynb](text_gen/text_gen.ipynb): explores 4 different encoder-decoder text summarization models
 - [Text_summarization_1.ipynb](text_gen/Text_summarization_1.ipynb): conducts hierarchical summarization computes cosine similarity score
-- [bart_summaries.csv](text_gen/results/bart_summaries.csv):
+- [bart_summaries.csv](text_gen/results/bart_summaries.csv): 
 - [gpt_summaries.csv](text_gen/results/gpt_summaries.csv):
 - [t5_summaries.csv](text_gen/results/t5_summaries.csv): 
 
