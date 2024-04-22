@@ -23,7 +23,7 @@ Folder containing Association Rule Mining code
 
 ### data_preprocessing
 Folder containing Data Preprocessing code
-- [detected_emotion_preprocessing.ipynb](data_preprocessing/detected_emotion_preprocessing.ipynb):
+- [detected_emotion_preprocessing.ipynb](data_preprocessing/detected_emotion_preprocessing.ipynb): transforms the emotion data into usable format and integrates with the main dataset
 - [preprocess.py](data_preprocessing/preprocess.py): beginning data preprocessing code
 - [preprocess_attempts.ipynb](data_preprocessing/preprocess_attempts.ipynb): the experimentation that ultimately led to [text_processing.py](data_preprocessing/text_processing.py)
 - [text_processing.py](data_preprocessing/text_processing.py): the final processing code for the data
