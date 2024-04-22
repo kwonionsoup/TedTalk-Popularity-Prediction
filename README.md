@@ -1,3 +1,5 @@
+# [Link](https://github.gatech.edu/pages/clee821/CS-7641/index.html) to our GitHub Pages
+
 # CS-7641 Machine Learning Files
 
 ## Main Directory
