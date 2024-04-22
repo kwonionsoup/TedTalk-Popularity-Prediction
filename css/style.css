@@ -33,6 +33,13 @@ h3 {
     margin-bottom: 20px;
 }
 
+.final {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 
 #propdoc {
     width: 100%;
@@ -45,6 +52,11 @@ h3 {
 }
 
 #midtermdoc {
+    width: 100%;
+    min-height: 400px;
+}
+
+#finaldoc {
     width: 100%;
     min-height: 400px;
 }
