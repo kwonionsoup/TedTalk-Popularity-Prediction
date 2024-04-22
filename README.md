@@ -15,10 +15,10 @@
 
 ### association_mining
 Folder containing Association Rule Mining code
-- [title_association_rule_mining.ipynb](association_mining/title_association_rule_mining.ipynb): the file that trains and selects hyperparameters for association rule mining
-- [title_association_rule_viz.ipynb](title_association_mining/association_rule_viz.ipynb): the file that calculates statistics and creates visualizations for word groups extracted from above file
 - [association_functions.py](association_mining/association_functions.py): contains helper functions used in association rule mining .ipynb files
-- [emotion_association_rule_mining.ipynb](association_mining/emotion_association_rule_mining.ipynb):
+- [title_association_rule_mining.ipynb](association_mining/title_association_rule_mining.ipynb): the file that trains and selects hyperparameters for association rule mining on TED Talk titles
+- [title_association_rule_viz.ipynb](title_association_mining/association_rule_viz.ipynb): the file that calculates statistics and creates visualizations for word groups extracted from above file
+- [emotion_association_rule_mining.ipynb](association_mining/emotion_association_rule_mining.ipynb): the file that trains and selects hyperparameters for association rule mining on detected emotions and topics, and analyzes results
 
 ### data_preprocessing
 Folder containing Data Preprocessing code
