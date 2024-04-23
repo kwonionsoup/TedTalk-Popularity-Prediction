@@ -1,5 +1,12 @@
 # [Link](https://github.gatech.edu/pages/clee821/CS-7641/index.html) to our GitHub Pages
 
+
+
+
+## - [proposal.pdf](pdfs/proposal.pdf): project proposal
+## - [midterm_report.pdf](pdfs/midterm_report.pdf): midterm report
+## - [final.pdf](pdfs/final_report.pdf): final report
+
 ## Main Directory
 
 - [index.html](index.html): the html code for the GitHub Page's home page
@@ -70,11 +77,7 @@ Folder containing data
 - [updated_transcripts_with_emotions_final.csv](data/updated_transcripts_with_emotions_final.csv): contains transcripts with detected emotions extracted using OpenAI API and prompt engineering, not ready for SVR model integration yet.
 - [final_data_for_svr.csv](data/final_data_for_svr.csv): Combined data_sentiment_analysis.csv and updated_transcripts_with_emotions_final.csv and ready to be used for SVR model.
 
-### pdfs
-Folder containing pdfs
-- [proposal.pdf](pdfs/proposal.pdf): project proposal
-- [midterm_report.pdf](pdfs/midterm_report.pdf): midterm report
-- [final.pdf](pdfs/final_report.pdf): final report
+
 
 <!-- - [talks_info_noedits.csv](data/talks_info_noedits.csv) -->
 <!-- - [dropna_processed.csv](data/dropna_processed.csv)
