@@ -1,11 +1,20 @@
-# [Link](https://github.gatech.edu/pages/clee821/CS-7641/index.html) to our GitHub Pages
+### [Link](https://github.gatech.edu/pages/clee821/CS-7641/index.html) to our GitHub Pages
+
+# TED Talks Popularity Prediction Project
+
+## Introduction
+
+Welcome to our TED Talks Popularity Prediction project, where we apply advanced machine learning techniques to predict the popularity of TED Talks. Our multidisciplinary team has leveraged sentiment analysis, association rule mining, and support vector regression to delve deep into what makes a TED Talk resonate with its audience. This repository contains all the code, reports, and resources used in our project
 
 
 
+## Conclusion
 
-## - [proposal.pdf](pdfs/proposal.pdf): project proposal
-## - [midterm_report.pdf](pdfs/midterm_report.pdf): midterm report
-## - [final.pdf](pdfs/final_report.pdf): final report
+Our project demonstrates the power of combining multiple machine learning techniques to predict the popularity of digital content. Through our analyses, we've uncovered the significant impact of emotional tone, speaker background, and content type on viewer engagement. This work not only advances our understanding of content popularity but also lays the groundwork for future explorations into automated content analysis.
+
+### - [proposal.pdf](pdfs/proposal.pdf): project proposal
+### - [midterm_report.pdf](pdfs/midterm_report.pdf): midterm report
+### - [final.pdf](pdfs/final_report.pdf): final report
 
 ## Main Directory
 
